@@ -2,6 +2,6 @@ sudo: required
 service: 
   - docker
 before_install:
-  - docker build -f ./client/Dockerfile.dev -t soruc/docker-react .
+  - docker build -f ./client/Dockerfile.dev -t soruc/docker-react ./client
 script:
   - docker run -e CI=true soruc/docker-react npm run test
